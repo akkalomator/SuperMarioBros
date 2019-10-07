@@ -20,7 +20,7 @@ set(
         src/presenters/main-menu/sfml-main-menu-presenter.hpp
         src/exceptions/MoveBackException.cpp
         src/exceptions/MoveBackException.hpp
-        )
+        src/exceptions/ExitRequiredException.cpp src/exceptions/ExitRequiredException.hpp)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})
