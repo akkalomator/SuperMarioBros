@@ -8,12 +8,12 @@ AboutMenuState::AboutMenuState(std::shared_ptr<StateMachine> &machine, std::uniq
 
 void AboutMenuState::onStart()
 {
-
+  presenter_->drawWindow();
 }
 
 void AboutMenuState::update()
 {
-
+  presenter_->awaitExit();
 }
 
 void AboutMenuState::onStop()

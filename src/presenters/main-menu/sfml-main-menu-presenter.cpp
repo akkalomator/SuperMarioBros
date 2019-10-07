@@ -1,5 +1,5 @@
 #include "sfml-main-menu-presenter.hpp"
-#include "../../exceptions/MoveBackException.hpp"
+#include "../../exceptions/move-back-exception.hpp"
 #include <memory>
 
 SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
@@ -20,29 +20,6 @@ SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &
   start_ = text_ptr(new sf::Text("START", *font_, 30));
   about_ = text_ptr(new sf::Text("ABOUT", *font_, 30));
   credits_ = text_ptr(new sf::Text("CREDITS", *font_, 30));
-
-  resetStyles();
-}
-
-void SfmlMainMenuPresenter::resetStyles() const
-{
-  orangeRect_->setFillColor(sf::Color(213, 75, 0));
-  orangeRect_->setPosition(width_ / 20 * 7, height_ / 20 * 3);
-  orangeRect_->setSize({width_ / 20 * 8, height_ / 20 * 4});
-
-  super_->setPosition(width_ / 20 * 7, height_ / 20 * 3);
-  marevo_->setPosition(width_ / 20 * 7, height_ / 20 * 5);
-  bros_->setPosition(width_ / 20 * 7, height_ / 20 * 7);
-  super_->setFillColor(*defaultColour_);
-  marevo_->setFillColor(*defaultColour_);
-  bros_->setFillColor(*defaultColour_);
-
-  start_->setPosition(width_ / 20 * 8, height_ / 20 * 12);
-  about_->setPosition(width_ / 20 * 8, height_ / 20 * 14);
-  credits_->setPosition(width_ / 20 * 8, height_ / 20 * 16);
-  start_->setFillColor(*accentColour_);
-  about_->setFillColor(*defaultColour_);
-  credits_->setFillColor(*defaultColour_);
 }
 
 void SfmlMainMenuPresenter::drawMenu() const
@@ -55,8 +32,6 @@ void SfmlMainMenuPresenter::drawMenu() const
 
 MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
 {
-  resetStyles();
-
   sf::Event event{};
 
   int currentItem = 0;
@@ -173,4 +148,25 @@ SfmlMainMenuPresenter::text_ptr SfmlMainMenuPresenter::getFocused(int index) con
       throw std::invalid_argument("Index out of items range");
     }
   }
+}
+
+void SfmlMainMenuPresenter::resetStylesToDefault() const
+{
+  orangeRect_->setFillColor(sf::Color(213, 75, 0));
+  orangeRect_->setPosition(width_ / 20 * 7, height_ / 20 * 3);
+  orangeRect_->setSize({width_ / 20 * 8, height_ / 20 * 4});
+
+  super_->setPosition(width_ / 20 * 7, height_ / 20 * 3);
+  marevo_->setPosition(width_ / 20 * 7, height_ / 20 * 5);
+  bros_->setPosition(width_ / 20 * 7, height_ / 20 * 7);
+  super_->setFillColor(*defaultColour_);
+  marevo_->setFillColor(*defaultColour_);
+  bros_->setFillColor(*defaultColour_);
+
+  start_->setPosition(width_ / 20 * 8, height_ / 20 * 12);
+  about_->setPosition(width_ / 20 * 8, height_ / 20 * 14);
+  credits_->setPosition(width_ / 20 * 8, height_ / 20 * 16);
+  start_->setFillColor(*accentColour_);
+  about_->setFillColor(*defaultColour_);
+  credits_->setFillColor(*defaultColour_);
 }

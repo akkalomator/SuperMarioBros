@@ -19,6 +19,8 @@ public:
 
   MainMenuSubmenu getClickedSubmenu() const override;
 
+  void resetStylesToDefault() const override;
+
 private:
   std::shared_ptr<sf::RenderWindow> window_;
   float width_;
@@ -34,7 +36,7 @@ private:
   text_ptr about_;
   text_ptr credits_;
 
-  void resetStyles() const;
+private:
 
   void drawTitle() const;
 
@@ -44,6 +46,5 @@ private:
 
   MainMenuSubmenu getCategory(int currentItem) const;
 };
-
 
 #endif

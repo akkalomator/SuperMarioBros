@@ -1,9 +1,13 @@
 #ifndef ABOUT_MENU_PRESENTER_HPP
 #define ABOUT_MENU_PRESENTER_HPP
 
+#include <SFML/Graphics/RenderWindow.hpp>
+
 class AboutMenuPresenter
 {
-
+public:
+  virtual void drawWindow() const = 0;
+  virtual void awaitExit() const = 0;
 };
 
 #endif //ABOUT_MENU_PRESENTER_HPP

@@ -1,6 +1,16 @@
 #include "state-machine.hpp"
-#include "../exceptions/MoveBackException.hpp"
-#include "../exceptions/ExitRequiredException.hpp"
+#include "../exceptions/move-back-exception.hpp"
+#include "../exceptions/exit-required-exception.hpp"
+
+StateMachine::StateMachine(std::shared_ptr<PresenterFactory> &factory) :
+    factory_(std::move(factory))
+{
+}
+
+std::shared_ptr<PresenterFactory> StateMachine::getFactory()
+{
+  return factory_;
+}
 
 void StateMachine::addNewState(const state_ptr &newState)
 {
@@ -12,10 +22,12 @@ void StateMachine::back()
 {
   states_.top()->onStop();
   states_.pop();
-  if (states_.empty()) {
+  if (states_.empty())
+  {
     std::string msg = "All windows are closed";
     throw ExitRequiredException(msg);
   }
+  states_.top()->onStart();
 }
 
 void StateMachine::update()
