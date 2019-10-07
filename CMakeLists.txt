@@ -6,7 +6,21 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -static")
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp)
+set(
+        SOURCE_FILES
+        main.cpp
+        src/state-machine/state-machine.cpp
+        src/state-machine/state-machine.hpp
+        src/state-machine/states/state.hpp
+        src/state-machine/states/main-menu-state.cpp
+        src/state-machine/states/main-menu-state.hpp
+        src/presenters/main-menu/main-menu-presenter.hpp
+        src/presenters/main-menu/main-menu-submenues.hpp
+        src/presenters/main-menu/sfml-main-menu-presenter.cpp
+        src/presenters/main-menu/sfml-main-menu-presenter.hpp
+        src/exceptions/MoveBackException.cpp
+        src/exceptions/MoveBackException.hpp
+        )
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})
