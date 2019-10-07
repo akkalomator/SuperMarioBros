@@ -9,12 +9,12 @@ CreditsMenuState::CreditsMenuState(std::shared_ptr<StateMachine> &machine, std::
 
 void CreditsMenuState::onStart()
 {
-
+  presenter_->drawWindow();
 }
 
 void CreditsMenuState::update()
 {
-
+  presenter_->awaitExit();
 }
 
 void CreditsMenuState::onStop()

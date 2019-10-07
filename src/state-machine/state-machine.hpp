@@ -15,7 +15,7 @@ class StateMachine
 public:
   StateMachine(std::shared_ptr<PresenterFactory> &factory);
 
-  std::shared_ptr<PresenterFactory> getFactory();
+  std::shared_ptr<PresenterFactory> getPresenterFactory();
 
   void addNewState(const state_ptr &newState);
 

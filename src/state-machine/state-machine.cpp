@@ -7,7 +7,7 @@ StateMachine::StateMachine(std::shared_ptr<PresenterFactory> &factory) :
 {
 }
 
-std::shared_ptr<PresenterFactory> StateMachine::getFactory()
+std::shared_ptr<PresenterFactory> StateMachine::getPresenterFactory()
 {
   return factory_;
 }

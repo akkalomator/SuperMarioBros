@@ -30,7 +30,7 @@ set(SOURCE_FILES
         src/state-machine/states/credits-menu-state.hpp
         src/presenters/about-menu/sfml_about_menu_presenter.cpp
         src/presenters/about-menu/sfml_about_menu_presenter.hpp
-        src/presenters/factory/presenter-factory.hpp src/presenters/factory/sfml-presenter-factory.cpp src/presenters/factory/sfml-presenter-factory.hpp src/resource-loader/sfml-resource-loader.cpp src/resource-loader/sfml-resource-loader.hpp)
+        src/presenters/factory/presenter-factory.hpp src/presenters/factory/sfml-presenter-factory.cpp src/presenters/factory/sfml-presenter-factory.hpp src/resource-loader/sfml-resource-loader.cpp src/resource-loader/sfml-resource-loader.hpp src/presenters/credits-menu/sfml-credits-menu-presenter.cpp src/presenters/credits-menu/sfml-credits-menu-presenter.hpp)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})

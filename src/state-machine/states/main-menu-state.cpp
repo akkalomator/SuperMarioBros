@@ -1,6 +1,6 @@
 #include "main-menu-state.hpp"
-#include "../../presenters/about-menu/about-menu-presenter.hpp"
 #include "about-menu-state.hpp"
+#include "credits-menu-state.hpp"
 
 MainMenuState::MainMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<MainMenuPresenter> presenter) :
     State(machine),
@@ -24,13 +24,16 @@ void MainMenuState::update()
     }
     case ABOUT:
     {
-      std::unique_ptr<AboutMenuPresenter> presenter = machine_->getFactory()->getAboutMenuPresenter();
+      std::unique_ptr<AboutMenuPresenter> presenter = machine_->getPresenterFactory()->getAboutMenuPresenter();
       state_ptr aboutMenuState(new AboutMenuState(machine_, std::move(presenter)));
       machine_->addNewState(aboutMenuState);
       break;
     }
     case CREDITS:
     {
+      std::unique_ptr<CreditsMenuPresenter> presenter = machine_->getPresenterFactory()->getCreditsMenuPresenter();
+      state_ptr creditsMenuState(new CreditsMenuState(machine_, std::move(presenter)));
+      machine_->addNewState(creditsMenuState);
       break;
     }
   }
