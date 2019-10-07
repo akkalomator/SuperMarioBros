@@ -1,5 +1,6 @@
 #include "sfml-main-menu-presenter.hpp"
 #include "../../exceptions/move-back-exception.hpp"
+#include "../../resource-loader/sfml-resource-loader.hpp"
 #include <memory>
 
 SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
@@ -10,16 +11,15 @@ SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &
     defaultColour_(color_prt(new sf::Color(255, 255, 255))),
     accentColour_(color_prt(new sf::Color(255, 130, 130)))
 {
-  font_ = font_ptr(new sf::Font());
-  font_->loadFromFile("../resources/fonts/mario-font.ttf");
+  std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
 
-  super_ = text_ptr(new sf::Text("SUPER", *font_, 60));
-  marevo_ = text_ptr(new sf::Text("MAREVO", *font_, 60));
-  bros_ = text_ptr(new sf::Text("BROS", *font_, 60));
+  super_ = text_ptr(new sf::Text("SUPER", *font, 60));
+  marevo_ = text_ptr(new sf::Text("MAREVO", *font, 60));
+  bros_ = text_ptr(new sf::Text("BROS", *font, 60));
 
-  start_ = text_ptr(new sf::Text("START", *font_, 30));
-  about_ = text_ptr(new sf::Text("ABOUT", *font_, 30));
-  credits_ = text_ptr(new sf::Text("CREDITS", *font_, 30));
+  start_ = text_ptr(new sf::Text("START", *font, 30));
+  about_ = text_ptr(new sf::Text("ABOUT", *font, 30));
+  credits_ = text_ptr(new sf::Text("CREDITS", *font, 30));
 }
 
 void SfmlMainMenuPresenter::drawMenu() const
