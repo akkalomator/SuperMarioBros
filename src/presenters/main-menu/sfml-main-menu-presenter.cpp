@@ -1,6 +1,7 @@
 #include "sfml-main-menu-presenter.hpp"
 #include "../../exceptions/move-back-exception.hpp"
 #include "../../resource-loader/sfml-resource-loader.hpp"
+#include "../../exceptions/exit-required-exception.hpp"
 #include <memory>
 
 SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
@@ -39,7 +40,14 @@ MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
   bool selected = false;
   while (!selected)
   {
-    window_->pollEvent(event);
+    while (!window_->pollEvent(event))
+    {}
+
+    if (event.type == sf::Event::Closed)
+    {
+      std::string msg = "Exit from Main menu";
+      throw ExitRequiredException();
+    }
 
     if (event.type == sf::Event::KeyPressed)
     {
