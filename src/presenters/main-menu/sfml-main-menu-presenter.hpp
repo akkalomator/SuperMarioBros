@@ -7,7 +7,6 @@
 
 class SfmlMainMenuPresenter : public MainMenuPresenter
 {
-  typedef std::unique_ptr<sf::Font> font_ptr;
   typedef std::unique_ptr<sf::Color> color_prt;
   typedef std::unique_ptr<sf::RectangleShape> rectangle_shape_ptr;
   typedef std::shared_ptr<sf::Text> text_ptr;
@@ -26,7 +25,6 @@ private:
   float width_;
   float height_;
   rectangle_shape_ptr orangeRect_;
-  font_ptr font_;
   color_prt defaultColour_;
   color_prt accentColour_;
   text_ptr super_;

@@ -1,5 +1,6 @@
 #include "sfml_about_menu_presenter.hpp"
 #include "../../exceptions/move-back-exception.hpp"
+#include "../../resource-loader/sfml-resource-loader.hpp"
 #include <SFML/Graphics.hpp>
 
 SfmlAboutMenuPresenter::SfmlAboutMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
@@ -9,9 +10,8 @@ SfmlAboutMenuPresenter::SfmlAboutMenuPresenter(std::shared_ptr<sf::RenderWindow>
 
 void SfmlAboutMenuPresenter::drawWindow() const
 {
-  sf::Font font;
-  font.loadFromFile("../resources/fonts/mario-font.ttf");
-  sf::Text text("ABOUT", font);
+  std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
+  sf::Text text("ABOUT", *font);
 
   window_->clear();
   window_->draw(text);
