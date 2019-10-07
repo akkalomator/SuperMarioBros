@@ -1,9 +1,9 @@
-#ifndef CREDITSMENUSTATE_HPP
-#define CREDITSMENUSTATE_HPP
+#ifndef CREDITS_MENU_STATE_HPP
+#define CREDITS_MENU_STATE_HPP
 
 
-#include "state.hpp"
-#include "../../presenters/credits-menu/credits-menu-presenter.hpp"
+#include "../state.hpp"
+#include "../../../presenters/credits-menu/credits-menu-presenter.hpp"
 
 class CreditsMenuState : public State
 {
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif //CREDITSMENUSTATE_HPP
+#endif //CREDITS_MENU_STATE_HPP

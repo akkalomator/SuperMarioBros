@@ -34,8 +34,6 @@ private:
   text_ptr about_;
   text_ptr credits_;
 
-private:
-
   void drawTitle() const;
 
   void drawSubmenues() const;

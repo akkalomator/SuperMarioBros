@@ -1,5 +1,5 @@
-#ifndef PRESENTERFACTORY_HPP
-#define PRESENTERFACTORY_HPP
+#ifndef PRESENTER_FACTORY_HPP
+#define PRESENTER_FACTORY_HPP
 
 
 #include "../main-menu/main-menu-presenter.hpp"
@@ -10,8 +10,10 @@ class PresenterFactory
 {
 public:
   virtual std::unique_ptr<MainMenuPresenter> getMainMenuPresenter() = 0;
+
   virtual std::unique_ptr<AboutMenuPresenter> getAboutMenuPresenter() = 0;
+
   virtual std::unique_ptr<CreditsMenuPresenter> getCreditsMenuPresenter() = 0;
 };
 
-#endif //PRESENTERFACTORY_HPP
+#endif //PRESENTER_FACTORY_HPP

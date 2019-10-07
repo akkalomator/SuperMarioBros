@@ -7,4 +7,4 @@ enum MainMenuSubmenu {
   CREDITS
 };
 
-#endif
+#endif // MAIN_MENU_SUBMENUES_HPP

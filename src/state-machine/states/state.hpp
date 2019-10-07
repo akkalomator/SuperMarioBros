@@ -21,4 +21,4 @@ protected:
   std::shared_ptr<StateMachine> machine_;
 };
 
-#endif
+#endif // STATE_HPP

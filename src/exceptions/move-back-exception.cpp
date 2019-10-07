@@ -2,7 +2,7 @@
 
 MoveBackException::MoveBackException(std::string &msg) :
     msg_(msg)
-    {}
+{}
 
 const char *MoveBackException::what() const noexcept
 {

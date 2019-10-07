@@ -27,7 +27,8 @@ void SfmlAboutMenuPresenter::awaitExit() const
 
     if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
     {
-      while (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {}
+      while (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+      {}
       std::string msg = "Return from About menu";
       throw MoveBackException(msg);
     }

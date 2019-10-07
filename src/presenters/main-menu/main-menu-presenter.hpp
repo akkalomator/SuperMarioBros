@@ -1,5 +1,5 @@
-#ifndef PRESENTER_HPP
-#define PRESENTER_HPP
+#ifndef MAIN_MENU_PRESENTER_HPP
+#define MAIN_MENU_PRESENTER_HPP
 
 #include "main-menu-submenues.hpp"
 
@@ -13,4 +13,4 @@ public:
   virtual MainMenuSubmenu getClickedSubmenu() const = 0;
 };
 
-#endif
+#endif // MAIN_MENU_PRESENTER_HPP

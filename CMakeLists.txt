@@ -11,8 +11,8 @@ set(SOURCE_FILES
         src/state-machine/state-machine.cpp
         src/state-machine/state-machine.hpp
         src/state-machine/states/state.hpp
-        src/state-machine/states/main-menu-state.cpp
-        src/state-machine/states/main-menu-state.hpp
+        src/state-machine/states/main-menu/main-menu-state.cpp
+        src/state-machine/states/main-menu/main-menu-state.hpp
         src/presenters/main-menu/main-menu-presenter.hpp
         src/presenters/main-menu/main-menu-submenues.hpp
         src/presenters/main-menu/sfml-main-menu-presenter.cpp
@@ -22,15 +22,22 @@ set(SOURCE_FILES
         src/exceptions/exit-required-exception.cpp
         src/exceptions/exit-required-exception.hpp
         src/state-machine/states/state.cpp
-        src/state-machine/states/about-menu-state.cpp
-        src/state-machine/states/about-menu-state.hpp
+        src/state-machine/states/about-menu/about-menu-state.cpp
+        src/state-machine/states/about-menu/about-menu-state.hpp
         src/presenters/about-menu/about-menu-presenter.hpp
         src/presenters/credits-menu/credits-menu-presenter.hpp
-        src/state-machine/states/credits-menu-state.cpp
-        src/state-machine/states/credits-menu-state.hpp
+        src/state-machine/states/credits/credits-menu-state.cpp
+        src/state-machine/states/credits/credits-menu-state.hpp
         src/presenters/about-menu/sfml_about_menu_presenter.cpp
         src/presenters/about-menu/sfml_about_menu_presenter.hpp
-        src/presenters/factory/presenter-factory.hpp src/presenters/factory/sfml-presenter-factory.cpp src/presenters/factory/sfml-presenter-factory.hpp src/resource-loader/sfml-resource-loader.cpp src/resource-loader/sfml-resource-loader.hpp src/presenters/credits-menu/sfml-credits-menu-presenter.cpp src/presenters/credits-menu/sfml-credits-menu-presenter.hpp)
+        src/presenters/factory/presenter-factory.hpp
+        src/presenters/factory/sfml-presenter-factory.cpp
+        src/presenters/factory/sfml-presenter-factory.hpp
+        src/resource-loader/sfml-resource-loader.cpp
+        src/resource-loader/sfml-resource-loader.hpp
+        src/presenters/credits-menu/sfml-credits-menu-presenter.cpp
+        src/presenters/credits-menu/sfml-credits-menu-presenter.hpp
+        )
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})

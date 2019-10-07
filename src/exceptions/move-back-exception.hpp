@@ -1,5 +1,5 @@
-#ifndef MOVEBACKEXCEPTION_HPP
-#define MOVEBACKEXCEPTION_HPP
+#ifndef MOVE_BACK_EXCEPTION_HPP
+#define MOVE_BACK_EXCEPTION_HPP
 
 #include <exception>
 #include <string>
@@ -17,4 +17,4 @@ private:
 };
 
 
-#endif //MOVEBACKEXCEPTION_HPP
+#endif //MOVE_BACK_EXCEPTION_HPP

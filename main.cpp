@@ -2,7 +2,7 @@
 #include <memory>
 #include "src/presenters/main-menu/sfml-main-menu-presenter.hpp"
 #include "src/state-machine/state-machine.hpp"
-#include "src/state-machine/states/main-menu-state.hpp"
+#include "src/state-machine/states/main-menu/main-menu-state.hpp"
 #include "src/exceptions/exit-required-exception.hpp"
 #include "src/presenters/factory/sfml-presenter-factory.hpp"
 

@@ -1,6 +1,6 @@
 #include "main-menu-state.hpp"
-#include "about-menu-state.hpp"
-#include "credits-menu-state.hpp"
+#include "../about-menu/about-menu-state.hpp"
+#include "../credits/credits-menu-state.hpp"
 
 MainMenuState::MainMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<MainMenuPresenter> presenter) :
     State(machine),

@@ -65,7 +65,8 @@ MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
           current = getFocused(currentItem);
           current->setFillColor(*accentColour_);
           drawMenu();
-          while (sf::Keyboard::isKeyPressed(sf::Keyboard::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {}
+          while (sf::Keyboard::isKeyPressed(sf::Keyboard::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+          {}
           break;
         }
         case sf::Keyboard::S:
@@ -77,7 +78,8 @@ MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
           current = getFocused(currentItem);
           current->setFillColor(*accentColour_);
           drawMenu();
-          while (sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {}
+          while (sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+          {}
           break;
         }
         default:
@@ -92,7 +94,8 @@ MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
 
 MainMenuSubmenu SfmlMainMenuPresenter::getCategory(int currentItem) const
 {
-  switch (currentItem) {
+  switch (currentItem)
+  {
     case 0:
     {
       return START;

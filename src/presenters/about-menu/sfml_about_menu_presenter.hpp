@@ -1,5 +1,5 @@
-#ifndef SFMLABOUTMENUPRESENTER_HPP
-#define SFMLABOUTMENUPRESENTER_HPP
+#ifndef SFML_ABOUT_MENU_PRESENTER_HPP
+#define SFML_ABOUT_MENU_PRESENTER_HPP
 
 #include <memory>
 #include "about-menu-presenter.hpp"
@@ -18,4 +18,4 @@ private:
 };
 
 
-#endif //SFMLABOUTMENUPRESENTER_HPP
+#endif //SFML_ABOUT_MENU_PRESENTER_HPP

@@ -2,8 +2,8 @@
 #define  MAIN_MENU_STATE_HPP
 
 #include <bits/unique_ptr.h>
-#include "state.hpp"
-#include "../../presenters/main-menu/main-menu-presenter.hpp"
+#include "../state.hpp"
+#include "../../../presenters/main-menu/main-menu-presenter.hpp"
 
 class MainMenuState : public State
 {
@@ -21,4 +21,4 @@ private:
 };
 
 
-#endif
+#endif // MAIN_MENU_STATE_HPP

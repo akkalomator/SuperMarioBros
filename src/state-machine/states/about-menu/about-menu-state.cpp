@@ -18,5 +18,4 @@ void AboutMenuState::update()
 
 void AboutMenuState::onStop()
 {
-
 }
