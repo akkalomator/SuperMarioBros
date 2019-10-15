@@ -2,8 +2,8 @@
 #define  MAIN_MENU_STATE_HPP
 
 #include <bits/unique_ptr.h>
-#include "../state.hpp"
-#include "../../../presenters/main-menu/main-menu-presenter.hpp"
+#include "../State.hpp"
+#include "../../../presenters/main-menu/MainMenuPresenter.hpp"
 
 class MainMenuState : public State
 {

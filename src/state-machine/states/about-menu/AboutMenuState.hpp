@@ -1,8 +1,8 @@
 #ifndef ABOUT_MENU_STATE_HPP
 #define ABOUT_MENU_STATE_HPP
 
-#include "../state.hpp"
-#include "../../../presenters/about-menu/about-menu-presenter.hpp"
+#include "../State.hpp"
+#include "../../../presenters/about-menu/AboutMenuPresenter.hpp"
 
 class AboutMenuState : public State
 {

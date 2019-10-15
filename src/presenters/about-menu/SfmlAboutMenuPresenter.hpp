@@ -2,7 +2,7 @@
 #define SFML_ABOUT_MENU_PRESENTER_HPP
 
 #include <memory>
-#include "about-menu-presenter.hpp"
+#include "AboutMenuPresenter.hpp"
 
 class SfmlAboutMenuPresenter : public AboutMenuPresenter
 {

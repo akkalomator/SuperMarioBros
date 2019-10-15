@@ -2,9 +2,9 @@
 #define PRESENTER_FACTORY_HPP
 
 
-#include "../main-menu/main-menu-presenter.hpp"
-#include "../about-menu/about-menu-presenter.hpp"
-#include "../credits-menu/credits-menu-presenter.hpp"
+#include "../main-menu/MainMenuPresenter.hpp"
+#include "../about-menu/AboutMenuPresenter.hpp"
+#include "../credits-menu/CreditsMenuPresenter.hpp"
 
 class PresenterFactory
 {

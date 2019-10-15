@@ -1,4 +1,4 @@
-#include "credits-menu-state.hpp"
+#include "CreditsMenuState.hpp"
 
 CreditsMenuState::CreditsMenuState(std::shared_ptr<StateMachine> &machine,
                                    std::unique_ptr<CreditsMenuPresenter> presenter) :

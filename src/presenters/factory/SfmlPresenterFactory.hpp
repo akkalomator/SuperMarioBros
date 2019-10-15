@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "presenter-factory.hpp"
+#include "PresenterFactory.hpp"
 
 class SfmlPresenterFactory : public PresenterFactory
 {

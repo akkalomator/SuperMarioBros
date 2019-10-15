@@ -1,7 +1,7 @@
-#include "sfml-credits-menu-presenter.hpp"
-#include "../../resource-loader/sfml-resource-loader.hpp"
-#include "../../exceptions/move-back-exception.hpp"
-#include "../../exceptions/exit-required-exception.hpp"
+#include "SfmlCreditsMenuPresenter.hpp"
+#include "../../resource-loader/SfmlResourceLoader.hpp"
+#include "../../exceptions/MoveBackException.hpp"
+#include "../../exceptions/ExitReqiredException.hpp"
 
 SfmlCreditsMenuPresenter::SfmlCreditsMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
     window_(window)

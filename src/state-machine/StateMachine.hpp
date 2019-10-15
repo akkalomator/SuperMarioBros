@@ -3,8 +3,8 @@
 
 #include <memory>
 #include <stack>
-#include "states/state.hpp"
-#include "../presenters/factory/presenter-factory.hpp"
+#include "states/State.hpp"
+#include "../presenters/factory/PresenterFactory.hpp"
 
 class State;
 

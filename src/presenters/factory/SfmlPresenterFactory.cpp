@@ -1,7 +1,7 @@
-#include "sfml-presenter-factory.hpp"
-#include "../main-menu/sfml-main-menu-presenter.hpp"
-#include "../about-menu/sfml_about_menu_presenter.hpp"
-#include "../credits-menu/sfml-credits-menu-presenter.hpp"
+#include "SfmlPresenterFactory.hpp"
+#include "../main-menu/SfmlMainMenuPresenter.hpp"
+#include "../about-menu/SfmlAboutMenuPresenter.hpp"
+#include "../credits-menu/SfmlCreditsMenuPresenter.hpp"
 
 SfmlPresenterFactory::SfmlPresenterFactory(std::shared_ptr<sf::RenderWindow> &window) :
     window_(window)

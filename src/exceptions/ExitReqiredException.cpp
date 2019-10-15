@@ -1,4 +1,4 @@
-#include "exit-required-exception.hpp"
+#include "ExitReqiredException.hpp"
 
 ExitRequiredException::ExitRequiredException(std::string &msg) :
     msg_(msg)

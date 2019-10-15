@@ -8,35 +8,35 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES
         main.cpp
-        src/state-machine/state-machine.cpp
-        src/state-machine/state-machine.hpp
-        src/state-machine/states/state.hpp
-        src/state-machine/states/main-menu/main-menu-state.cpp
-        src/state-machine/states/main-menu/main-menu-state.hpp
-        src/presenters/main-menu/main-menu-presenter.hpp
-        src/presenters/main-menu/main-menu-submenues.hpp
-        src/presenters/main-menu/sfml-main-menu-presenter.cpp
-        src/presenters/main-menu/sfml-main-menu-presenter.hpp
-        src/exceptions/move-back-exception.cpp
-        src/exceptions/move-back-exception.hpp
-        src/exceptions/exit-required-exception.cpp
-        src/exceptions/exit-required-exception.hpp
-        src/state-machine/states/state.cpp
-        src/state-machine/states/about-menu/about-menu-state.cpp
-        src/state-machine/states/about-menu/about-menu-state.hpp
-        src/presenters/about-menu/about-menu-presenter.hpp
-        src/presenters/credits-menu/credits-menu-presenter.hpp
-        src/state-machine/states/credits/credits-menu-state.cpp
-        src/state-machine/states/credits/credits-menu-state.hpp
-        src/presenters/about-menu/sfml_about_menu_presenter.cpp
-        src/presenters/about-menu/sfml_about_menu_presenter.hpp
-        src/presenters/factory/presenter-factory.hpp
-        src/presenters/factory/sfml-presenter-factory.cpp
-        src/presenters/factory/sfml-presenter-factory.hpp
-        src/resource-loader/sfml-resource-loader.cpp
-        src/resource-loader/sfml-resource-loader.hpp
-        src/presenters/credits-menu/sfml-credits-menu-presenter.cpp
-        src/presenters/credits-menu/sfml-credits-menu-presenter.hpp
+        src/state-machine/StateMachine.cpp
+        src/state-machine/StateMachine.hpp
+        src/state-machine/states/State.hpp
+        src/state-machine/states/main-menu/MainMenuState.cpp
+        src/state-machine/states/main-menu/MainMenuState.hpp
+        src/presenters/main-menu/MainMenuPresenter.hpp
+        src/presenters/main-menu/MainMenuSubmenues.hpp
+        src/presenters/main-menu/SfmlMainMenuPresenter.cpp
+        src/presenters/main-menu/SfmlMainMenuPresenter.hpp
+        src/exceptions/MoveBackException.cpp
+        src/exceptions/MoveBackException.hpp
+        src/exceptions/ExitReqiredException.cpp
+        src/exceptions/ExitReqiredException.hpp
+        src/state-machine/states/State.cpp
+        src/state-machine/states/about-menu/AboutMenuState.cpp
+        src/state-machine/states/about-menu/AboutMenuState.hpp
+        src/presenters/about-menu/AboutMenuPresenter.hpp
+        src/presenters/credits-menu/CreditsMenuPresenter.hpp
+        src/state-machine/states/credits/CreditsMenuState.cpp
+        src/state-machine/states/credits/CreditsMenuState.hpp
+        src/presenters/about-menu/SfmlAboutMenuPresenter.cpp
+        src/presenters/about-menu/SfmlAboutMenuPresenter.hpp
+        src/presenters/factory/PresenterFactory.hpp
+        src/presenters/factory/SfmlPresenterFactory.cpp
+        src/presenters/factory/SfmlPresenterFactory.hpp
+        src/resource-loader/SfmlResourceLoader.cpp
+        src/resource-loader/SfmlResourceLoader.hpp
+        src/presenters/credits-menu/SfmlCreditsMenuPresenter.cpp
+        src/presenters/credits-menu/SfmlCreditsMenuPresenter.hpp
         )
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")

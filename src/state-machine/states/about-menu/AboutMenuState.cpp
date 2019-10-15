@@ -1,4 +1,4 @@
-#include "about-menu-state.hpp"
+#include "AboutMenuState.hpp"
 
 AboutMenuState::AboutMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<AboutMenuPresenter> presenter) :
     State(machine),

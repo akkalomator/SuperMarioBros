@@ -1,7 +1,7 @@
-#include "sfml-main-menu-presenter.hpp"
-#include "../../exceptions/move-back-exception.hpp"
-#include "../../resource-loader/sfml-resource-loader.hpp"
-#include "../../exceptions/exit-required-exception.hpp"
+#include "SfmlMainMenuPresenter.hpp"
+#include "../../exceptions/MoveBackException.hpp"
+#include "../../resource-loader/SfmlResourceLoader.hpp"
+#include "../../exceptions/ExitReqiredException.hpp"
 #include <memory>
 
 SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :

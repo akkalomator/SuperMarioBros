@@ -2,7 +2,7 @@
 #define STATE_HPP
 
 #include <memory>
-#include "../state-machine.hpp"
+#include "../StateMachine.hpp"
 
 class StateMachine;
 

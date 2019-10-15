@@ -1,6 +1,6 @@
-#include "state-machine.hpp"
-#include "../exceptions/move-back-exception.hpp"
-#include "../exceptions/exit-required-exception.hpp"
+#include "StateMachine.hpp"
+#include "../exceptions/MoveBackException.hpp"
+#include "../exceptions/ExitReqiredException.hpp"
 
 StateMachine::StateMachine(std::shared_ptr<PresenterFactory> &factory) :
     factory_(std::move(factory))

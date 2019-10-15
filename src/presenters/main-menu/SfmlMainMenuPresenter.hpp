@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <SFML/Graphics.hpp>
-#include "main-menu-presenter.hpp"
+#include "MainMenuPresenter.hpp"
 
 class SfmlMainMenuPresenter : public MainMenuPresenter
 {

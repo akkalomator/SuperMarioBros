@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <SFML/Graphics.hpp>
-#include "credits-menu-presenter.hpp"
+#include "CreditsMenuPresenter.hpp"
 
 class SfmlCreditsMenuPresenter : public CreditsMenuPresenter
 {

@@ -1,4 +1,4 @@
-#include "sfml-resource-loader.hpp"
+#include "SfmlResourceLoader.hpp"
 
 std::shared_ptr<sf::Font> SfmlResourceLoader::getSuperMarioFont()
 {

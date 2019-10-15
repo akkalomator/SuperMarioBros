@@ -1,10 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
-#include "src/presenters/main-menu/sfml-main-menu-presenter.hpp"
-#include "src/state-machine/state-machine.hpp"
-#include "src/state-machine/states/main-menu/main-menu-state.hpp"
-#include "src/exceptions/exit-required-exception.hpp"
-#include "src/presenters/factory/sfml-presenter-factory.hpp"
+#include "src/presenters/main-menu/SfmlMainMenuPresenter.hpp"
+#include "src/state-machine/StateMachine.hpp"
+#include "src/state-machine/states/main-menu/MainMenuState.hpp"
+#include "src/exceptions/ExitReqiredException.hpp"
+#include "src/presenters/factory/SfmlPresenterFactory.hpp"
 
 int main()
 {

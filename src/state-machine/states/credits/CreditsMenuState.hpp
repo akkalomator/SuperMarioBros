@@ -2,8 +2,8 @@
 #define CREDITS_MENU_STATE_HPP
 
 
-#include "../state.hpp"
-#include "../../../presenters/credits-menu/credits-menu-presenter.hpp"
+#include "../State.hpp"
+#include "../../../presenters/credits-menu/CreditsMenuPresenter.hpp"
 
 class CreditsMenuState : public State
 {

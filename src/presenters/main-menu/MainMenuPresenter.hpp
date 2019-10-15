@@ -1,7 +1,7 @@
 #ifndef MAIN_MENU_PRESENTER_HPP
 #define MAIN_MENU_PRESENTER_HPP
 
-#include "main-menu-submenues.hpp"
+#include "MainMenuSubmenues.hpp"
 
 class MainMenuPresenter
 {
