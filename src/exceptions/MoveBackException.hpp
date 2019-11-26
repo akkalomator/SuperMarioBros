@@ -8,6 +8,7 @@ class MoveBackException : public std::exception
 {
 public:
   MoveBackException() = default;
+
   explicit MoveBackException(std::string &msg);
 
   const char *what() const noexcept override;
