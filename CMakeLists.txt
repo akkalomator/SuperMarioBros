@@ -37,7 +37,17 @@ set(SOURCE_FILES
         src/resource-loader/SfmlResourceLoader.hpp
         src/presenters/credits-menu/SfmlCreditsMenuPresenter.cpp
         src/presenters/credits-menu/SfmlCreditsMenuPresenter.hpp
-        )
+        src/game/sfml-super-mario/Animation.cpp
+        src/game/sfml-super-mario/Animation.hpp
+        src/game/sfml-super-mario/Game.cpp
+        src/game/sfml-super-mario/Game.hpp
+        src/game/sfml-super-mario/GameObject.cpp
+        src/game/sfml-super-mario/GameObject.hpp
+        src/game/sfml-super-mario/GameObjectManager.cpp
+        src/game/sfml-super-mario/GameObjectManager.hpp
+        src/game/sfml-super-mario/Player.cpp
+        src/game/sfml-super-mario/Player.hpp
+        src/sfml-provider/SfmlProvider.cpp src/sfml-provider/SfmlProvider.hpp src/state-machine/states/game-state/GameState.cpp src/state-machine/states/game-state/GameState.hpp src/game/sfml-super-mario/Camera.cpp src/game/sfml-super-mario/Camera.hpp)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})
