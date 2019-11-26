@@ -128,8 +128,6 @@ bool Player::isOnGround(const sf::Vector2f &pos) const
     if (obj.second.isTouchable() &&
         touches(body_.getGlobalBounds().height, pos.y, obj.second.getUpperBorder(), obj.second.getLowerBorder()))
     {
-      std::cout << pos.y << std::endl;
-      std::cout << body_.getGlobalBounds().height << std::endl;
       return true;
     }
   }
