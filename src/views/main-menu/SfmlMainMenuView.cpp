@@ -1,10 +1,10 @@
-#include "SfmlMainMenuPresenter.hpp"
+#include "SfmlMainMenuView.hpp"
 #include "../../exceptions/MoveBackException.hpp"
 #include "../../resource-loader/SfmlResourceLoader.hpp"
 #include "../../exceptions/ExitReqiredException.hpp"
 #include <memory>
 
-SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
+SfmlMainMenuView::SfmlMainMenuView(std::shared_ptr<sf::RenderWindow> &window) :
     window_(window),
     width_(window->getSize().x),
     height_(window->getSize().y),
@@ -23,7 +23,7 @@ SfmlMainMenuPresenter::SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &
   credits_ = text_ptr(new sf::Text("CREDITS", *font, 30));
 }
 
-void SfmlMainMenuPresenter::drawMenu() const
+void SfmlMainMenuView::drawMenu() const
 {
   window_->clear();
   drawTitle();
@@ -31,7 +31,7 @@ void SfmlMainMenuPresenter::drawMenu() const
   window_->display();
 }
 
-MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
+MainMenuSubmenu SfmlMainMenuView::getClickedSubmenu() const
 {
   sf::Event event{};
 
@@ -100,7 +100,7 @@ MainMenuSubmenu SfmlMainMenuPresenter::getClickedSubmenu() const
   return getCategory(currentItem);
 }
 
-MainMenuSubmenu SfmlMainMenuPresenter::getCategory(int currentItem) const
+MainMenuSubmenu SfmlMainMenuView::getCategory(int currentItem) const
 {
   switch (currentItem)
   {
@@ -123,7 +123,7 @@ MainMenuSubmenu SfmlMainMenuPresenter::getCategory(int currentItem) const
   }
 }
 
-void SfmlMainMenuPresenter::drawTitle() const
+void SfmlMainMenuView::drawTitle() const
 {
   window_->draw(*orangeRect_);
   window_->draw(*super_);
@@ -131,14 +131,14 @@ void SfmlMainMenuPresenter::drawTitle() const
   window_->draw(*bros_);
 }
 
-void SfmlMainMenuPresenter::drawSubmenues() const
+void SfmlMainMenuView::drawSubmenues() const
 {
   window_->draw(*start_);
   window_->draw(*about_);
   window_->draw(*credits_);
 }
 
-SfmlMainMenuPresenter::text_ptr SfmlMainMenuPresenter::getFocused(int index) const
+SfmlMainMenuView::text_ptr SfmlMainMenuView::getFocused(int index) const
 {
   switch (index)
   {
@@ -161,7 +161,7 @@ SfmlMainMenuPresenter::text_ptr SfmlMainMenuPresenter::getFocused(int index) con
   }
 }
 
-void SfmlMainMenuPresenter::resetStylesToDefault() const
+void SfmlMainMenuView::resetStylesToDefault() const
 {
   orangeRect_->setFillColor(sf::Color(213, 75, 0));
   orangeRect_->setPosition(width_ / 20 * 7, height_ / 20 * 3);

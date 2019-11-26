@@ -1,14 +1,14 @@
-#include "SfmlCreditsMenuPresenter.hpp"
+#include "SfmlCreditsMenuView.hpp"
 #include "../../resource-loader/SfmlResourceLoader.hpp"
 #include "../../exceptions/MoveBackException.hpp"
 #include "../../exceptions/ExitReqiredException.hpp"
 
-SfmlCreditsMenuPresenter::SfmlCreditsMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
+SfmlCreditsMenuView::SfmlCreditsMenuView(std::shared_ptr<sf::RenderWindow> &window) :
     window_(window)
 {
 }
 
-void SfmlCreditsMenuPresenter::drawWindow() const
+void SfmlCreditsMenuView::drawWindow() const
 {
   std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
 
@@ -39,7 +39,7 @@ void SfmlCreditsMenuPresenter::drawWindow() const
   window_->display();
 }
 
-void SfmlCreditsMenuPresenter::awaitExit() const
+void SfmlCreditsMenuView::awaitExit() const
 {
   sf::Event event{};
   while (true)

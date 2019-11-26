@@ -3,12 +3,12 @@
 
 #include <memory>
 #include <SFML/Graphics.hpp>
-#include "CreditsMenuPresenter.hpp"
+#include "CreditsMenuView.hpp"
 
-class SfmlCreditsMenuPresenter : public CreditsMenuPresenter
+class SfmlCreditsMenuView : public CreditsMenuView
 {
 public:
-  explicit SfmlCreditsMenuPresenter(std::shared_ptr<sf::RenderWindow> &window);
+  explicit SfmlCreditsMenuView(std::shared_ptr<sf::RenderWindow> &window);
 
   void drawWindow() const override;
 

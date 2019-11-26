@@ -2,12 +2,12 @@
 #define ABOUT_MENU_STATE_HPP
 
 #include "../State.hpp"
-#include "../../../presenters/about-menu/AboutMenuPresenter.hpp"
+#include "../../../views/about-menu/AboutMenuView.hpp"
 
 class AboutMenuState : public State
 {
 public:
-  AboutMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<AboutMenuPresenter> presenter);
+  AboutMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<AboutMenuView> view);
 
   void onStart() override;
 
@@ -16,7 +16,7 @@ public:
   void onStop() override;
 
 private:
-  std::unique_ptr<AboutMenuPresenter> presenter_;
+  std::unique_ptr<AboutMenuView> view_;
 };
 
 

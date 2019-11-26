@@ -3,13 +3,13 @@
 
 
 #include "../State.hpp"
-#include "../../../presenters/credits-menu/CreditsMenuPresenter.hpp"
+#include "../../../views/credits-menu/CreditsMenuView.hpp"
 
 class CreditsMenuState : public State
 {
 public:
 
-  explicit CreditsMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<CreditsMenuPresenter> presenter);
+  explicit CreditsMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<CreditsMenuView> view);
 
   void onStart() override;
 
@@ -19,7 +19,7 @@ public:
 
 private:
 
-  std::unique_ptr<CreditsMenuPresenter> presenter_;
+  std::unique_ptr<CreditsMenuView> view_;
 };
 
 

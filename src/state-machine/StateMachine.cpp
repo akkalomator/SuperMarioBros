@@ -2,12 +2,12 @@
 #include "../exceptions/MoveBackException.hpp"
 #include "../exceptions/ExitReqiredException.hpp"
 
-StateMachine::StateMachine(std::shared_ptr<PresenterFactory> &factory) :
+StateMachine::StateMachine(std::shared_ptr<ViewFactory> &factory) :
     factory_(std::move(factory))
 {
 }
 
-std::shared_ptr<PresenterFactory> StateMachine::getPresenterFactory()
+std::shared_ptr<ViewFactory> StateMachine::getPresenterFactory()
 {
   return factory_;
 }

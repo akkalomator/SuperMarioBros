@@ -3,16 +3,16 @@
 
 #include <memory>
 #include <SFML/Graphics.hpp>
-#include "MainMenuPresenter.hpp"
+#include "MainMenuView.hpp"
 
-class SfmlMainMenuPresenter : public MainMenuPresenter
+class SfmlMainMenuView : public MainMenuView
 {
   typedef std::unique_ptr<sf::Color> color_prt;
   typedef std::unique_ptr<sf::RectangleShape> rectangle_shape_ptr;
   typedef std::shared_ptr<sf::Text> text_ptr;
 
 public:
-  explicit SfmlMainMenuPresenter(std::shared_ptr<sf::RenderWindow> &window);
+  explicit SfmlMainMenuView(std::shared_ptr<sf::RenderWindow> &window);
 
   void drawMenu() const override;
 

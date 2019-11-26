@@ -2,12 +2,12 @@
 #define SFML_ABOUT_MENU_PRESENTER_HPP
 
 #include <memory>
-#include "AboutMenuPresenter.hpp"
+#include "AboutMenuView.hpp"
 
-class SfmlAboutMenuPresenter : public AboutMenuPresenter
+class SfmlAboutMenuView : public AboutMenuView
 {
 public:
-  explicit SfmlAboutMenuPresenter(std::shared_ptr<sf::RenderWindow> &window);
+  explicit SfmlAboutMenuView(std::shared_ptr<sf::RenderWindow> &window);
 
   void drawWindow() const override;
 

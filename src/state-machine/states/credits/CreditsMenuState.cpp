@@ -1,20 +1,20 @@
 #include "CreditsMenuState.hpp"
 
 CreditsMenuState::CreditsMenuState(std::shared_ptr<StateMachine> &machine,
-                                   std::unique_ptr<CreditsMenuPresenter> presenter) :
+                                   std::unique_ptr<CreditsMenuView> view) :
     State(machine),
-    presenter_(std::move(presenter))
+    view_(std::move(view))
 {
 }
 
 void CreditsMenuState::onStart()
 {
-  presenter_->drawWindow();
+  view_->drawWindow();
 }
 
 void CreditsMenuState::update()
 {
-  presenter_->awaitExit();
+  view_->awaitExit();
 }
 
 void CreditsMenuState::onStop()

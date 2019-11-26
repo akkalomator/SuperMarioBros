@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class AboutMenuPresenter
+class AboutMenuView
 {
 public:
   virtual void drawWindow() const = 0;

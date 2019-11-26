@@ -13,10 +13,10 @@ set(SOURCE_FILES
         src/state-machine/states/State.hpp
         src/state-machine/states/main-menu/MainMenuState.cpp
         src/state-machine/states/main-menu/MainMenuState.hpp
-        src/presenters/main-menu/MainMenuPresenter.hpp
-        src/presenters/main-menu/MainMenuSubmenues.hpp
-        src/presenters/main-menu/SfmlMainMenuPresenter.cpp
-        src/presenters/main-menu/SfmlMainMenuPresenter.hpp
+        src/views/main-menu/MainMenuView.hpp
+        src/views/main-menu/MainMenuSubmenues.hpp
+        src/views/main-menu/SfmlMainMenuView.cpp
+        src/views/main-menu/SfmlMainMenuView.hpp
         src/exceptions/MoveBackException.cpp
         src/exceptions/MoveBackException.hpp
         src/exceptions/ExitReqiredException.cpp
@@ -24,19 +24,19 @@ set(SOURCE_FILES
         src/state-machine/states/State.cpp
         src/state-machine/states/about-menu/AboutMenuState.cpp
         src/state-machine/states/about-menu/AboutMenuState.hpp
-        src/presenters/about-menu/AboutMenuPresenter.hpp
-        src/presenters/credits-menu/CreditsMenuPresenter.hpp
+        src/views/about-menu/AboutMenuView.hpp
+        src/views/credits-menu/CreditsMenuView.hpp
         src/state-machine/states/credits/CreditsMenuState.cpp
         src/state-machine/states/credits/CreditsMenuState.hpp
-        src/presenters/about-menu/SfmlAboutMenuPresenter.cpp
-        src/presenters/about-menu/SfmlAboutMenuPresenter.hpp
-        src/presenters/factory/PresenterFactory.hpp
-        src/presenters/factory/SfmlPresenterFactory.cpp
-        src/presenters/factory/SfmlPresenterFactory.hpp
+        src/views/about-menu/SfmlAboutMenuView.cpp
+        src/views/about-menu/SfmlAboutMenuView.hpp
+        src/views/factory/ViewFactory.hpp
+        src/views/factory/SfmlViewFactory.cpp
+        src/views/factory/SfmlViewFactory.hpp
         src/resource-loader/SfmlResourceLoader.cpp
         src/resource-loader/SfmlResourceLoader.hpp
-        src/presenters/credits-menu/SfmlCreditsMenuPresenter.cpp
-        src/presenters/credits-menu/SfmlCreditsMenuPresenter.hpp
+        src/views/credits-menu/SfmlCreditsMenuView.cpp
+        src/views/credits-menu/SfmlCreditsMenuView.hpp
         src/game/sfml-super-mario/Animation.cpp
         src/game/sfml-super-mario/Animation.hpp
         src/game/sfml-super-mario/Game.cpp

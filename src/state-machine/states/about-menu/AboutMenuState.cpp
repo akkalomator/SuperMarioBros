@@ -1,19 +1,19 @@
 #include "AboutMenuState.hpp"
 
-AboutMenuState::AboutMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<AboutMenuPresenter> presenter) :
+AboutMenuState::AboutMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<AboutMenuView> view) :
     State(machine),
-    presenter_(std::move(presenter))
+    view_(std::move(view))
 {
 }
 
 void AboutMenuState::onStart()
 {
-  presenter_->drawWindow();
+  view_->drawWindow();
 }
 
 void AboutMenuState::update()
 {
-  presenter_->awaitExit();
+  view_->awaitExit();
 }
 
 void AboutMenuState::onStop()

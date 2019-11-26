@@ -3,12 +3,12 @@
 
 #include <bits/unique_ptr.h>
 #include "../State.hpp"
-#include "../../../presenters/main-menu/MainMenuPresenter.hpp"
+#include "../../../views/main-menu/MainMenuView.hpp"
 
 class MainMenuState : public State
 {
 public:
-  MainMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<MainMenuPresenter> presenter);
+  MainMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<MainMenuView> view);
 
   void onStart() override;
 
@@ -17,7 +17,7 @@ public:
   void onStop() override;
 
 private:
-  std::unique_ptr<MainMenuPresenter> presenter_;
+  std::unique_ptr<MainMenuView> view_;
 };
 
 

@@ -1,7 +1,7 @@
 #ifndef CREDITS_MENU_PRESENTER_HPP
 #define CREDITS_MENU_PRESENTER_HPP
 
-class CreditsMenuPresenter
+class CreditsMenuView
 {
 public:
   virtual void drawWindow() const = 0;

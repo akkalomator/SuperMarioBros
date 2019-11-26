@@ -1,15 +1,15 @@
-#include "SfmlAboutMenuPresenter.hpp"
+#include "SfmlAboutMenuView.hpp"
 #include "../../exceptions/MoveBackException.hpp"
 #include "../../resource-loader/SfmlResourceLoader.hpp"
 #include "../../exceptions/ExitReqiredException.hpp"
 #include <SFML/Graphics.hpp>
 
-SfmlAboutMenuPresenter::SfmlAboutMenuPresenter(std::shared_ptr<sf::RenderWindow> &window) :
+SfmlAboutMenuView::SfmlAboutMenuView(std::shared_ptr<sf::RenderWindow> &window) :
     window_(window)
 {
 }
 
-void SfmlAboutMenuPresenter::drawWindow() const
+void SfmlAboutMenuView::drawWindow() const
 {
   std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
   sf::Text title("ABOUT", *font, 50);
@@ -23,7 +23,7 @@ void SfmlAboutMenuPresenter::drawWindow() const
   window_->display();
 }
 
-void SfmlAboutMenuPresenter::awaitExit() const
+void SfmlAboutMenuView::awaitExit() const
 {
   sf::Event event{};
   while (true)

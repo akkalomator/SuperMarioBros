@@ -3,7 +3,7 @@
 
 #include "MainMenuSubmenues.hpp"
 
-class MainMenuPresenter
+class MainMenuView
 {
 public:
   virtual void resetStylesToDefault() const = 0;
