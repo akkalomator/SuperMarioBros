@@ -1,6 +1,7 @@
 #include "MainMenuState.hpp"
 #include "../about-menu/AboutMenuState.hpp"
 #include "../credits/CreditsMenuState.hpp"
+#include "../game-state/GameState.hpp"
 
 MainMenuState::MainMenuState(std::shared_ptr<StateMachine> &machine, std::unique_ptr<MainMenuPresenter> presenter) :
     State(machine),
@@ -20,6 +21,8 @@ void MainMenuState::update()
   {
     case START:
     {
+      state_ptr gameState(new GameState(machine_));
+      machine_->addNewState(gameState);
       break;
     }
     case ABOUT:
@@ -41,5 +44,4 @@ void MainMenuState::update()
 
 void MainMenuState::onStop()
 {
-
 }
