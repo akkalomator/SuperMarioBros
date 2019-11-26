@@ -12,10 +12,14 @@ SfmlAboutMenuPresenter::SfmlAboutMenuPresenter(std::shared_ptr<sf::RenderWindow>
 void SfmlAboutMenuPresenter::drawWindow() const
 {
   std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
-  sf::Text text("ABOUT", *font);
+  sf::Text title("ABOUT", *font, 50);
+  title.setPosition(20, 20);
+  sf::Text about("This is mario game\nUse arrows to walk\nUse space to jump\nHave fun :)", *font);
+  about.setPosition(20, 100);
 
   window_->clear();
-  window_->draw(text);
+  window_->draw(title);
+  window_->draw(about);
   window_->display();
 }
 
