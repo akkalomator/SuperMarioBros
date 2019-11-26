@@ -11,10 +11,31 @@ SfmlCreditsMenuPresenter::SfmlCreditsMenuPresenter(std::shared_ptr<sf::RenderWin
 void SfmlCreditsMenuPresenter::drawWindow() const
 {
   std::shared_ptr<sf::Font> font = SfmlResourceLoader::getSuperMarioFont();
-  sf::Text text("akkalomator 2019", *font);
+
+  sf::Text title("Credits", *font, 50);
+  title.setPosition(20, 20);
+
+  sf::Text gameName("Super Marevo Bros", *font);
+  gameName.setFillColor(sf::Color(255, 111, 0));
+  gameName.setPosition(20, 100);
+
+  sf::Text author("By akkalomator 2019", *font);
+  author.setPosition(20, 160);
+
+  sf::Text courseName("for SPbSTU c++", *font);
+  courseName.setFillColor(sf::Color(255, 255, 255, 25));
+  courseName.setPosition(20, 220);
+
+  sf::Text love("Dedicated to Dasha with love", *font);
+  love.setFillColor(sf::Color(255, 255, 255, 50));
+  love.setPosition(20, 650);
 
   window_->clear();
-  window_->draw(text);
+  window_->draw(title);
+  window_->draw(gameName);
+  window_->draw(author);
+  window_->draw(courseName);
+  window_->draw(love);
   window_->display();
 }
 
