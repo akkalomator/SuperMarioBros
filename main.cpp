@@ -5,11 +5,11 @@
 #include "src/state-machine/states/main-menu/MainMenuState.hpp"
 #include "src/exceptions/ExitReqiredException.hpp"
 #include "src/presenters/factory/SfmlPresenterFactory.hpp"
+#include "src/sfml-provider/SfmlProvider.hpp"
 
 int main()
 {
-  auto *window1 = new sf::RenderWindow(sf::VideoMode(1280, 720), "Super MAREVO bros");
-  std::shared_ptr<sf::RenderWindow> window = std::shared_ptr<sf::RenderWindow>(window1);
+  std::shared_ptr<sf::RenderWindow> window = SfmlProvider::getWindow();
 
   std::shared_ptr<PresenterFactory> factory(new SfmlPresenterFactory(window));
 
