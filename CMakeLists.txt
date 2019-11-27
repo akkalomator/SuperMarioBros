@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -static")
 set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES
-        main.cpp
+        src/main.cpp
         src/state-machine/StateMachine.cpp
         src/state-machine/StateMachine.hpp
         src/state-machine/states/State.hpp
