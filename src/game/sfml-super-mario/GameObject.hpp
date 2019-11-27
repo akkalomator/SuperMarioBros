@@ -11,9 +11,6 @@ public:
     GameObject(int width, int height, bool isTouchable);
     ~GameObject();
     
-    // define dimensions and position
-    int width, height;
-    
     void setPosition(float x, float y);
     sf::Vector2f getPosition();
     void draw(std::shared_ptr<sf::RenderWindow> window);
